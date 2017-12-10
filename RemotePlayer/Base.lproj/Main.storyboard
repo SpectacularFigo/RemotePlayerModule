@@ -52,12 +52,18 @@
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgt-cW-Ayk">
                                 <rect key="frame" x="157" y="160" width="100" height="30"/>
-                                <state key="normal" title="Rewind"/>
+                                <state key="normal" title="Rewind 15s"/>
+                                <connections>
+                                    <action selector="rewind:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5jG-uy-Wkt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lM9-u0-mLh">
                                 <rect key="frame" x="157" y="125" width="100" height="30"/>
-                                <state key="normal" title="Fast Forward"/>
+                                <state key="normal" title="FF 15s"/>
                                 <state key="selected" title="Unmute"/>
+                                <connections>
+                                    <action selector="fastForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ME-lz-jAc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cG-EZ-BF7">
                                 <rect key="frame" x="157" y="90" width="100" height="30"/>

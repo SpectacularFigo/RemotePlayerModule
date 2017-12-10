@@ -130,7 +130,7 @@ extension RemotePlayer{
     }
     
     
-    func seek(with timeDiffer: Double) {
+    func seekWithTimeDiffer(with timeDiffer: Double) {
         
         // Current time of PlayItem
         guard let currentTime = player?.currentItem?.currentTime() else { return }

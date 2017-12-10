@@ -45,16 +45,21 @@ class ViewController: UIViewController {
         } else {
             return
         }
-        
+    }
+    
+    @IBAction func fastForward(_ sender: UIButton) {
+       RemotePlayer.sharedInstance.seekWithTimeDiffer(with: 15)
+    }
+    
+    @IBAction func rewind(_ sender: UIButton) {
+          RemotePlayer.sharedInstance.seekWithTimeDiffer(with: -15)
     }
     
     @IBAction func progress(_ sender: UISlider) {
-        
-        
+        RemotePlayer.sharedInstance.seek(with: sender.value)
     }
     
     @IBAction func muteButton(_ sender: UIButton) {
-        
        isMuted = !isMuted
         if isMuted {
             sender.setTitle("Unmute", for: .normal )
@@ -63,12 +68,10 @@ class ViewController: UIViewController {
             sender.setTitle("Mute", for: .normal )
             RemotePlayer.sharedInstance.mute = isMuted
         }
-
     }
     
     @IBAction func changeVolumne(_ sender: UISlider) {
         RemotePlayer.sharedInstance.volumn = sender.value
-        
     }
     
     
